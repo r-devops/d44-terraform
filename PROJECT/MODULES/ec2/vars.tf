@@ -4,3 +4,4 @@ variable "PROJECT" {}
 variable "ENV" {}
 variable "SUBNETS" {}
 variable "SG-SSH" {}
+variable "SG-MONGO" {}

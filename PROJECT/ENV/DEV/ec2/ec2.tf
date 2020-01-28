@@ -6,6 +6,7 @@ module "EC2" {
   AMI_ACCOUNT     = var.AMI_ACCOUNT
   SUBNETS         = data.terraform_remote_state.vpc.outputs.SUBNETS
   SG-SSH          = data.terraform_remote_state.sg.outputs.SG-SSH
+  SG-MONGO        = data.terraform_remote_state.sg.outputs.SG_MONGO
 }
 
 terraform {
