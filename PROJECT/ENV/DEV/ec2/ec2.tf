@@ -32,7 +32,7 @@ data "terraform_remote_state" "sg" {
   backend = "s3"
   config    =  {
     bucket  = "d44-terraform-resources"
-    key     = "PROJECT/DEV/SG
+    key     = "PROJECT/DEV/SG"
     region  = "us-east-2"
   }
 }
