@@ -1,0 +1,14 @@
+module "EC2" {
+  source              = "../../MODULES/ec2"
+  INPUTS              = var.INPUTS
+  SG-EC2              = module.SG.SG-EC2
+  AMI_ACCOUNT         = var.AMI_ACCOUNT
+  INSTANCE_TYPE_APP   = var.INSTANCE_TYPE_APP
+}
+
+module "SG" {
+  source              = "../../MODULES/sg"
+  PORTS               = var.PORTS
+  INPUTS              = var.INPUTS
+}
+
