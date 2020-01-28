@@ -24,5 +24,6 @@ module "SG" {
   source          = "../../../MODULES/sg"
   PROJECT         = var.PROJECT
   ENV             = var.ENV
-  VPCID         = data.terraform_remote_state.remote.outputs.VPCID
+  VPCID           = data.terraform_remote_state.remote.outputs.VPCID
+  VPC_CIDR        = data.terraform_remote_state.remote.outputs.VPC_CIDR
 }

@@ -5,3 +5,7 @@ output "VPCID" {
 output "SUBNETS" {
   value = aws_subnet.subnets.*.id
 }
+
+output "VPC_CIDR" {
+  value = var.VPC_CIDR
+}

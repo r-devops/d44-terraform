@@ -21,3 +21,26 @@ resource "aws_security_group" "sg-ssh" {
   }
 }
 
+resource "aws_security_group" "sg-mongo" {
+  name                = "allow_mongo"
+  description         = "Allow Mongo inbound traffic"
+  vpc_id              = var.VPCID
+
+  ingress {
+    from_port         = 22
+    to_port           = 22
+    protocol          = "tcp"
+    cidr_blocks       = [""]
+  }
+
+  egress {
+    from_port         = 0
+    to_port           = 0
+    protocol          = "-1"
+    cidr_blocks       = ["0.0.0.0/0"]
+  }
+  tags                = {
+    Name              = "sg-Mongo-${var.PROJECT}-${var.ENV}"
+  }
+}
+
